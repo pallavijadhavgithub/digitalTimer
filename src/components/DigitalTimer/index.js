@@ -9,6 +9,10 @@ class DigitalTimer extends Component {
     timeElapsedInSeconds: 0,
   }
 
+  componentWillUnmount() {
+    this.clearTimer()
+  }
+
   clearTimer = () => {
     clearInterval(this.intervalId)
   }
